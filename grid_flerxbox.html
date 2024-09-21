@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRID & FLEXBOX</title>
+  <style>
+    body,
+    html {
+      margin: auto;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 10px;
+    }
+
+    .grid-item {
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #333;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(1, 80px);
+        grid-template-rows: repeat(3, 80px);
+      }
+
+      .grid-item {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .grid-container {
+        grid-template-columns: repeat(1, 100px);
+        grid-template-rows: repeat(6, 100px);
+      }
+
+      .grid-item {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-item">KOTAK 1</div>
+    <div class="grid-item">KOTAK 2</div>
+    <div class="grid-item">KOTAK 3</div>
+    <div class="grid-item">KOTAK 4</div>
+    <div class="grid-item">KOTAK 5</div>
+    <div class="grid-item">KOTAK 6</div>
+  </div>
+</body>
+
+</html>

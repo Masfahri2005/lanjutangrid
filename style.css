@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+  grid-template-row: 100px 1fr 50px;
+  grid-template-columns: 200px 1fr;
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+header {
+  grid-area: header;
+  background-color: red;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h2 {
+  transition: transform 0.3s ease-in-out;
+}
+
+header:hover h2 {
+  transform: scale(1.05);
+}
+nav {
+  grid-area: nav;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 15px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  border-color: #333;
+  background-color: #fff;
+  color: #e63946;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  grid-area: content;
+  background-color: limegreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease in ease-in-out;
+}
+
+main:hover {
+  transform: translate(-10px);
+}
+
+main section {
+  text-align: center;
+}
+
+main h2 {
+  margin-bottom: 20px;
+}
+
+main p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+footer {
+  grid-area: footer;
+  background-color: cyan;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #333;
+  padding: 10px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+}
